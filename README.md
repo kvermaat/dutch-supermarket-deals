@@ -82,3 +82,138 @@ Exclude words:
 
 Minimum discount:
 10% 
+The integration searches PrijsProfeet and only displays offers matching the configured filters.
+
+🔍 Product filtering
+Product
+
+The product field is the search query sent to PrijsProfeet.
+
+Examples:
+
+Calve pindakaas
+Hertog Jan
+Coca Cola
+courgette
+Category
+
+Category is optional.
+
+When supplied, the product must have the same unified_category returned by PrijsProfeet.
+
+Example:
+
+groente-fruit
+
+A useful setup for courgette could be:
+
+Product:
+courgette
+
+Category:
+groente-fruit
+
+Exclude words:
+mix, honig, bakplaat
+Exclude words
+
+Multiple excluded words or phrases can be entered separated by commas.
+
+Example:
+
+mix, honig, bakplaat
+
+If any excluded word or phrase occurs in the product name, that result is hidden.
+
+💰 Sorting
+
+Offers can be sorted by:
+
+Highest discount
+Lowest price
+Biggest saving €
+Store
+⭐ Best deal only
+
+When Best deal only is enabled, only one matching offer is displayed for each watched product.
+
+The selected sorting method determines which offer is considered the best.
+
+For example:
+
+Sort offers by:
+Lowest price
+
+Best deal only:
+Enabled
+
+This shows the cheapest matching offer for each watched product.
+
+If the cheapest supermarket is disabled in the card settings, the next cheapest matching supermarket is shown instead.
+
+🏪 Supermarket filtering
+
+Supermarkets can be enabled or disabled from the card configuration.
+
+For example, if Dirk is disabled, Dirk offers are excluded from the results.
+
+🖥️ Card layout
+
+The card supports:
+
+List
+
+A single-column compact layout.
+
+Grid
+
+A configurable multi-column grid.
+
+Available column counts:
+
+1
+2
+3
+4
+
+The layout automatically adapts to smaller screens.
+
+🔄 Shared lists
+
+Each card has a Shared list ID.
+
+Cards using the same list ID share the same watched products through Home Assistant.
+
+Example:
+
+default
+
+This allows the same watchlist to be used on multiple dashboards and devices.
+
+🌐 Data source
+
+Supermarket product and pricing data is supplied by:
+
+PrijsProfeet
+
+https://www.prijsprofeet.nl
+
+Dutch Supermarket Deals is an independent Home Assistant community project and is not affiliated with PrijsProfeet or any supermarket listed by the integration.
+
+Product availability, prices, promotions and supermarket coverage depend on the information supplied by PrijsProfeet.
+
+🐛 Issues
+
+Found a bug or have a feature request?
+
+Please create an issue:
+
+https://github.com/kvermaat/dutch-supermarket-deals/issues
+
+When reporting a problem, please include:
+
+Home Assistant version
+Dutch Supermarket Deals version
+Browser/device if the problem affects the card
+Relevant Home Assistant logs
+Product search and filters used when applicable
