@@ -1,0 +1,14 @@
+{
+  "title": "NL Supermarket Deals",
+  "config": {
+    "step": {
+      "user": {
+        "title": "NL Supermarket Deals",
+        "description": "Connect Home Assistant met PrijsProfeet. Producten en supermarketen kun je met de card definiëren."
+      }
+    },
+    "abort": {
+      "already_configured": "NL Supermarket Deals staat al geconfigureerd."
+    }
+  }
+}
