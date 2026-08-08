@@ -81,7 +81,8 @@ Exclude words:
 (empty)
 
 Minimum discount:
-10% 
+10%
+
 The integration searches PrijsProfeet and only displays offers matching the configured filters.
 
 🔍 Product filtering
