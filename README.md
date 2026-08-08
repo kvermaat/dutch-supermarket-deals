@@ -1,6 +1,6 @@
 # 🛒 Dutch Supermarket Deals
 
-A Home Assistant custom integration and Lovelace card for finding supermarket deals in the Netherlands using data from [PrijsProfeet](https://www.prijsprofeet.nl).
+A Home Assistant custom integration and Lovelace card for finding supermarket deals in the Netherlands using data from PrijsProfeet.
 
 Dutch Supermarket Deals lets you create a shared watchlist of supermarket products and automatically shows matching current offers from selected Dutch supermarkets.
 
@@ -46,12 +46,16 @@ Availability depends on the data provided by PrijsProfeet.
 
 ### Custom repository
 
-Until Dutch Supermarket Deals is included in the default HACS repository list, add it as a custom repository.
+Until Dutch Supermarket Deals is available directly through HACS, add it as a custom repository.
 
 1. Open HACS in Home Assistant.
 2. Open the menu in the top-right corner.
 3. Select **Custom repositories**.
-4. Add:https://github.com/kvermaat/dutch-supermarket-deals
+4. Add:
+
+```text
+https://github.com/kvermaat/dutch-supermarket-deals
+```
 
 5. Select **Integration** as the repository type.
 6. Install **Dutch Supermarket Deals**.
@@ -82,32 +86,40 @@ Exclude words:
 
 Minimum discount:
 10%
+```
 
 The integration searches PrijsProfeet and only displays offers matching the configured filters.
 
-🔍 Product filtering
-Product
+## 🔍 Product filtering
+
+### Product
 
 The product field is the search query sent to PrijsProfeet.
 
 Examples:
 
+```text
 Calve pindakaas
 Hertog Jan
 Coca Cola
 courgette
-Category
+```
+
+### Category
 
 Category is optional.
 
-When supplied, the product must have the same unified_category returned by PrijsProfeet.
+When supplied, the product must have the same `unified_category` returned by PrijsProfeet.
 
 Example:
 
+```text
 groente-fruit
+```
 
 A useful setup for courgette could be:
 
+```text
 Product:
 courgette
 
@@ -116,86 +128,95 @@ groente-fruit
 
 Exclude words:
 mix, honig, bakplaat
-Exclude words
+```
+
+### Exclude words
 
 Multiple excluded words or phrases can be entered separated by commas.
 
 Example:
 
+```text
 mix, honig, bakplaat
+```
 
 If any excluded word or phrase occurs in the product name, that result is hidden.
 
-💰 Sorting
+## 💰 Sorting
 
 Offers can be sorted by:
 
-Highest discount
-Lowest price
-Biggest saving €
-Store
-⭐ Best deal only
+- **Highest discount**
+- **Lowest price**
+- **Biggest saving €**
+- **Store**
 
-When Best deal only is enabled, only one matching offer is displayed for each watched product.
+## ⭐ Best deal only
+
+When **Best deal only** is enabled, only one matching offer is displayed for each watched product.
 
 The selected sorting method determines which offer is considered the best.
 
 For example:
 
+```text
 Sort offers by:
 Lowest price
 
 Best deal only:
 Enabled
+```
 
 This shows the cheapest matching offer for each watched product.
 
 If the cheapest supermarket is disabled in the card settings, the next cheapest matching supermarket is shown instead.
 
-🏪 Supermarket filtering
+## 🏪 Supermarket filtering
 
 Supermarkets can be enabled or disabled from the card configuration.
 
 For example, if Dirk is disabled, Dirk offers are excluded from the results.
 
-🖥️ Card layout
+## 🖥️ Card layout
 
-The card supports:
+The card supports two layouts.
 
-List
+### List
 
 A single-column compact layout.
 
-Grid
+### Grid
 
 A configurable multi-column grid.
 
 Available column counts:
 
+```text
 1
 2
 3
 4
+```
 
 The layout automatically adapts to smaller screens.
 
-🔄 Shared lists
+## 🔄 Shared lists
 
-Each card has a Shared list ID.
+Each card has a **Shared list ID**.
 
 Cards using the same list ID share the same watched products through Home Assistant.
 
 Example:
 
+```text
 default
+```
 
 This allows the same watchlist to be used on multiple dashboards and devices.
 
-🌐 Data source
+## 🌐 Data source
 
-Supermarket product and pricing data is supplied by:
-
-PrijsProfeet
+Supermarket product and pricing data is supplied by PrijsProfeet.
 
 https://www.prijsprofeet.nl
 
@@ -203,7 +224,7 @@ Dutch Supermarket Deals is an independent Home Assistant community project and i
 
 Product availability, prices, promotions and supermarket coverage depend on the information supplied by PrijsProfeet.
 
-🐛 Issues
+## 🐛 Issues
 
 Found a bug or have a feature request?
 
@@ -213,8 +234,24 @@ https://github.com/kvermaat/dutch-supermarket-deals/issues
 
 When reporting a problem, please include:
 
-Home Assistant version
-Dutch Supermarket Deals version
-Browser/device if the problem affects the card
-Relevant Home Assistant logs
-Product search and filters used when applicable
+- Home Assistant version
+- Dutch Supermarket Deals version
+- Browser/device if the problem affects the card
+- Relevant Home Assistant logs
+- Product search and filters used when applicable
+
+## 🤝 Contributing
+
+Contributions, bug reports and improvements are welcome.
+
+Repository:
+
+https://github.com/kvermaat/dutch-supermarket-deals
+
+## 📄 License
+
+Dutch Supermarket Deals is released under the MIT License.
+
+See `LICENSE` for details.
+
+The license applies to the source code of Dutch Supermarket Deals. Third-party services, product data, trademarks and logos remain the property of their respective owners.
