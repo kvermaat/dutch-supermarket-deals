@@ -4,6 +4,14 @@ A Home Assistant custom integration and Lovelace card for finding supermarket de
 
 Dutch Supermarket Deals lets you create a shared watchlist of supermarket products and automatically shows matching current offers from selected Dutch supermarkets.
 
+## 👋 About this project
+
+I'm not a software developer. This project started as a personal idea for my own Home Assistant setup and grew into something I thought could be useful to other people as well.
+
+ChatGPT helped me turn the idea into a working Home Assistant integration, understand the code, troubleshoot problems, and prepare the project for sharing with the community.
+
+I'm continuing to learn as I work on the project, so feedback, bug reports and contributions are very welcome.
+
 ## ✨ Features
 
 - Search current Dutch supermarket deals
@@ -243,6 +251,8 @@ When reporting a problem, please include:
 ## 🤝 Contributing
 
 Contributions, bug reports and improvements are welcome.
+
+I'm learning as I go, so help from experienced Home Assistant and Python developers is especially appreciated.
 
 Repository:
 
