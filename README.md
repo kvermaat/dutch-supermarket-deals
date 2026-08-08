@@ -51,4 +51,34 @@ Until Dutch Supermarket Deals is included in the default HACS repository list, a
 1. Open HACS in Home Assistant.
 2. Open the menu in the top-right corner.
 3. Select **Custom repositories**.
-4. Add:
+4. Add:https://github.com/kvermaat/dutch-supermarket-deals
+
+5. Select **Integration** as the repository type.
+6. Install **Dutch Supermarket Deals**.
+7. Restart Home Assistant.
+
+After restarting:
+
+1. Go to **Settings → Devices & services**.
+2. Select **Add integration**.
+3. Search for **Dutch Supermarket Deals**.
+4. Complete the setup.
+
+## 🛒 Watched products
+
+Products are added directly from the Dutch Supermarket Deals dashboard card.
+
+Example:
+
+```text
+Product:
+Calve pindakaas
+
+Category:
+ontbijt
+
+Exclude words:
+(empty)
+
+Minimum discount:
+10% 
